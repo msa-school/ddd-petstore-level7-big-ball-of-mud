@@ -36,3 +36,4 @@ http "http://localhost:8080/cartItems/2/items"
 ## 다음: 도메인 영역의 분리와 연동
 - Pet <-> Store 도메인의 분리 (Bounded Context)
 - 도메인간 연동 (Context Mapping, Anti-corruption)
+- https://github.com/event-storming/ddd-petstore
