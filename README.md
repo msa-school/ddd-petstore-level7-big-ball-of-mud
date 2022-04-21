@@ -27,8 +27,7 @@ mvn spring-boot:run
 http localhost:8080/customers id="park@naver.com" address[zipcode]="123" address[detail]="용인"
 
 # 카트에 뽀삐담기
-http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" 
-items[]="http://localhost:8080/pets/1"
+http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" items[]="http://localhost:8080/pets/1"
 
 # 카트에 담긴 뽀삐확인
 http "http://localhost:8080/cartItems/2/items"
@@ -45,6 +44,9 @@ http "http://localhost:8080/cartItems/2/items"
 ```
 http :8080/cats name="몽이"
 http :8080/dogs name="춘삼이"
+
+http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" items:='["http://localhost:8080/cats/4", "http://localhost:8080/dogs/5"]'
+
 ```
 
 ## 다음: 도메인 영역의 분리와 연동
