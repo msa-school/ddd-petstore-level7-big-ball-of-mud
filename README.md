@@ -23,8 +23,14 @@ mvn spring-boot:run
 
 
 ```
+# 회원등록
 http localhost:8080/customers id="park@naver.com" address[zipcode]="123" address[detail]="용인"
-http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" items:='["http://localhost:8080/pets/1"]'
+
+# 카트에 뽀삐담기
+http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" 
+items[]="http://localhost:8080/pets/1"
+
+# 카트에 담긴 뽀삐확인
 http "http://localhost:8080/cartItems/2/items"
 ```
 
