@@ -54,7 +54,7 @@ public abstract class Pet {
 	}
 
 	public void save(){
-		Repository repository = PetstoreApplication.getApplicationContext().getBean(Repository.class);
+		PetRepository repository = PetstoreApplication.getApplicationContext().getBean(PetRepository.class);
 		repository.save(this);
 	}
 

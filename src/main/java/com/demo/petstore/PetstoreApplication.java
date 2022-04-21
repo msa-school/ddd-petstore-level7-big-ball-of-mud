@@ -2,7 +2,6 @@ package com.demo.petstore;
 
 import com.demo.petstore.domain.Dog;
 import com.demo.petstore.domain.Pet;
-import com.demo.petstore.domain.Repository;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -39,7 +39,17 @@ http "http://localhost:8080/cartItems/2/items"
 - Core Domain과 Supporting Domain 의 간섭, 장애전파, 복잡성의 범람
 - Ubiquitous Language 의 손상 (Store Domain: Item 을 Item 이라 부르지 못하고 Pet 을 사용)
 
+## 추가 변경사항
+- Cat 과 Dog 를 따로 등록할 수 있도록 CatRepository.java 와 DogRepository.java 를 만들었음
+- 따라서 다음과 같이 Cat 과 Dog 를 http 로 등록할 수 있음:
+```
+http :8080/cats name="몽이"
+http :8080/dogs name="춘삼이"
+```
+
 ## 다음: 도메인 영역의 분리와 연동
 - Pet <-> Store 도메인의 분리 (Bounded Context)
 - 도메인간 연동 (Context Mapping, Anti-corruption)
 - https://github.com/event-storming/ddd-petstore
+
+
