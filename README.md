@@ -52,6 +52,6 @@ http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" i
 ## 다음: 도메인 영역의 분리와 연동
 - Pet <-> Store 도메인의 분리 (Bounded Context)
 - 도메인간 연동 (Context Mapping, Anti-corruption)
-- https://github.com/event-storming/ddd-petstore
+- https://github.com/msa-school/ddd-petstore-level9-bounded-multi-model
 
 
