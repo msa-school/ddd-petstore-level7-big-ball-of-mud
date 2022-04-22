@@ -42,8 +42,8 @@ http "http://localhost:8080/cartItems/2/items"
 - Cat 과 Dog 를 따로 등록할 수 있도록 CatRepository.java 와 DogRepository.java 를 만들었음
 - 따라서 다음과 같이 Cat 과 Dog 를 http 로 등록할 수 있음:
 ```
-http :8080/cats name="몽이"
-http :8080/dogs name="춘삼이"
+http :8080/cats name="몽이" price[currency]="KR_WON" price[amount]=100000
+http :8080/dogs name="춘삼이" price[currency]="EURO" price[amount]=200000
 
 http :8080/cartItems customer="http://localhost:8083/customers/park@naver.com" items:='["http://localhost:8080/cats/4", "http://localhost:8080/dogs/5"]'
 
