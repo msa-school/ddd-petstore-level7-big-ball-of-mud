@@ -12,6 +12,12 @@ import com.demo.petstore.PetstoreApplication;
 )
 public abstract class Pet {
 
+	@Id @GeneratedValue
+	int id;
+		public int getId() {
+			return id;
+		}
+
 	String name;
 		public String getName() {
 			return name;
@@ -36,10 +42,20 @@ public abstract class Pet {
 			this.energy = energy;
 		}
 
-	@Id @GeneratedValue
-	int id;
-		public int getId() {
-			return id;
+	Money price;
+		public Money getPrice() {
+			return price;
+		}
+		public void setPrice(Money price) {
+			this.price = price;
+		}
+
+	Address placeOfAdoption;
+		public Address getPlaceOfAdoption() {
+			return placeOfAdoption;
+		}
+		public void setPlaceOfAdoption(Address placeOfAdoption) {
+			this.placeOfAdoption = placeOfAdoption;
 		}
 
 	public abstract String speak();
